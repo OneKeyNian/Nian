@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D91A393AD7D0BCE2E595F42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C43ACBE880C6EFE15379883 /* libPods.a */; };
 		D43F11791B54A956005B04C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11781B54A956005B04C8 /* main.m */; };
 		D43F117C1B54A956005B04C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F117B1B54A956005B04C8 /* AppDelegate.m */; };
-		D43F117F1B54A956005B04C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F117E1B54A956005B04C8 /* ViewController.m */; };
-		D43F11821B54A956005B04C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F11801B54A956005B04C8 /* Main.storyboard */; };
 		D43F11841B54A956005B04C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43F11831B54A956005B04C8 /* Images.xcassets */; };
 		D43F11871B54A956005B04C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43F11851B54A956005B04C8 /* LaunchScreen.xib */; };
 		D43F11931B54A956005B04C8 /* NianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11921B54A956005B04C8 /* NianTests.m */; };
+		D43F11AA1B54A9E1005B04C8 /* NianDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F119D1B54A9E1005B04C8 /* NianDBTool.m */; };
+		D43F11AB1B54A9E1005B04C8 /* NianFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F119F1B54A9E1005B04C8 /* NianFrameModel.m */; };
+		D43F11AC1B54A9E1005B04C8 /* NianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A11B54A9E1005B04C8 /* NianModel.m */; };
+		D43F11AD1B54A9E1005B04C8 /* NianTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A31B54A9E1005B04C8 /* NianTableViewCell.m */; };
+		D43F11AE1B54A9E1005B04C8 /* NianTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A51B54A9E1005B04C8 /* NianTextField.m */; };
+		D43F11AF1B54A9E1005B04C8 /* NianTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A71B54A9E1005B04C8 /* NianTimeView.m */; };
+		D43F11B01B54A9E1005B04C8 /* NianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A91B54A9E1005B04C8 /* NianViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +33,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C43ACBE880C6EFE15379883 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1E3E090CCD76FD44F2F5747 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B3C115BE486BB1FAB24BE9FC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D43F11731B54A956005B04C8 /* Nian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43F11771B54A956005B04C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43F11781B54A956005B04C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D43F117A1B54A956005B04C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D43F117B1B54A956005B04C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D43F117D1B54A956005B04C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D43F117E1B54A956005B04C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D43F11811B54A956005B04C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D43F11831B54A956005B04C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D43F11861B54A956005B04C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D43F118C1B54A956005B04C8 /* NianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43F11911B54A956005B04C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43F11921B54A956005B04C8 /* NianTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NianTests.m; sourceTree = "<group>"; };
+		D43F119C1B54A9E1005B04C8 /* NianDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianDBTool.h; sourceTree = "<group>"; };
+		D43F119D1B54A9E1005B04C8 /* NianDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianDBTool.m; sourceTree = "<group>"; };
+		D43F119E1B54A9E1005B04C8 /* NianFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianFrameModel.h; sourceTree = "<group>"; };
+		D43F119F1B54A9E1005B04C8 /* NianFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianFrameModel.m; sourceTree = "<group>"; };
+		D43F11A01B54A9E1005B04C8 /* NianModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianModel.h; sourceTree = "<group>"; };
+		D43F11A11B54A9E1005B04C8 /* NianModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianModel.m; sourceTree = "<group>"; };
+		D43F11A21B54A9E1005B04C8 /* NianTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianTableViewCell.h; sourceTree = "<group>"; };
+		D43F11A31B54A9E1005B04C8 /* NianTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianTableViewCell.m; sourceTree = "<group>"; };
+		D43F11A41B54A9E1005B04C8 /* NianTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianTextField.h; sourceTree = "<group>"; };
+		D43F11A51B54A9E1005B04C8 /* NianTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianTextField.m; sourceTree = "<group>"; };
+		D43F11A61B54A9E1005B04C8 /* NianTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianTimeView.h; sourceTree = "<group>"; };
+		D43F11A71B54A9E1005B04C8 /* NianTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianTimeView.m; sourceTree = "<group>"; };
+		D43F11A81B54A9E1005B04C8 /* NianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianViewController.h; sourceTree = "<group>"; };
+		D43F11A91B54A9E1005B04C8 /* NianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D91A393AD7D0BCE2E595F42 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +87,8 @@
 				D43F11751B54A956005B04C8 /* Nian */,
 				D43F118F1B54A956005B04C8 /* NianTests */,
 				D43F11741B54A956005B04C8 /* Products */,
+				F35C88EF4E30C115857781E3 /* Pods */,
+				DC3E7B9F5D8CAFED8CD11C70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +104,22 @@
 		D43F11751B54A956005B04C8 /* Nian */ = {
 			isa = PBXGroup;
 			children = (
+				D43F119C1B54A9E1005B04C8 /* NianDBTool.h */,
+				D43F119D1B54A9E1005B04C8 /* NianDBTool.m */,
+				D43F119E1B54A9E1005B04C8 /* NianFrameModel.h */,
+				D43F119F1B54A9E1005B04C8 /* NianFrameModel.m */,
+				D43F11A01B54A9E1005B04C8 /* NianModel.h */,
+				D43F11A11B54A9E1005B04C8 /* NianModel.m */,
+				D43F11A21B54A9E1005B04C8 /* NianTableViewCell.h */,
+				D43F11A31B54A9E1005B04C8 /* NianTableViewCell.m */,
+				D43F11A41B54A9E1005B04C8 /* NianTextField.h */,
+				D43F11A51B54A9E1005B04C8 /* NianTextField.m */,
+				D43F11A61B54A9E1005B04C8 /* NianTimeView.h */,
+				D43F11A71B54A9E1005B04C8 /* NianTimeView.m */,
+				D43F11A81B54A9E1005B04C8 /* NianViewController.h */,
+				D43F11A91B54A9E1005B04C8 /* NianViewController.m */,
 				D43F117A1B54A956005B04C8 /* AppDelegate.h */,
 				D43F117B1B54A956005B04C8 /* AppDelegate.m */,
-				D43F117D1B54A956005B04C8 /* ViewController.h */,
-				D43F117E1B54A956005B04C8 /* ViewController.m */,
-				D43F11801B54A956005B04C8 /* Main.storyboard */,
 				D43F11831B54A956005B04C8 /* Images.xcassets */,
 				D43F11851B54A956005B04C8 /* LaunchScreen.xib */,
 				D43F11761B54A956005B04C8 /* Supporting Files */,
@@ -119,6 +153,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC3E7B9F5D8CAFED8CD11C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C43ACBE880C6EFE15379883 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F35C88EF4E30C115857781E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3C115BE486BB1FAB24BE9FC /* Pods.debug.xcconfig */,
+				B1E3E090CCD76FD44F2F5747 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D43F11961B54A956005B04C8 /* Build configuration list for PBXNativeTarget "Nian" */;
 			buildPhases = (
+				01D967C0E9B6CC22760EA443 /* Check Pods Manifest.lock */,
 				D43F116F1B54A956005B04C8 /* Sources */,
 				D43F11701B54A956005B04C8 /* Frameworks */,
 				D43F11711B54A956005B04C8 /* Resources */,
+				1822E5AC60D49CF5FABD45B5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D43F11821B54A956005B04C8 /* Main.storyboard in Resources */,
 				D43F11871B54A956005B04C8 /* LaunchScreen.xib in Resources */,
 				D43F11841B54A956005B04C8 /* Images.xcassets in Resources */,
 			);
@@ -214,14 +266,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01D967C0E9B6CC22760EA443 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1822E5AC60D49CF5FABD45B5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D43F116F1B54A956005B04C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D43F117F1B54A956005B04C8 /* ViewController.m in Sources */,
 				D43F117C1B54A956005B04C8 /* AppDelegate.m in Sources */,
+				D43F11AF1B54A9E1005B04C8 /* NianTimeView.m in Sources */,
+				D43F11AD1B54A9E1005B04C8 /* NianTableViewCell.m in Sources */,
+				D43F11AB1B54A9E1005B04C8 /* NianFrameModel.m in Sources */,
+				D43F11B01B54A9E1005B04C8 /* NianViewController.m in Sources */,
+				D43F11AE1B54A9E1005B04C8 /* NianTextField.m in Sources */,
+				D43F11AA1B54A9E1005B04C8 /* NianDBTool.m in Sources */,
 				D43F11791B54A956005B04C8 /* main.m in Sources */,
+				D43F11AC1B54A9E1005B04C8 /* NianModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +335,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D43F11801B54A956005B04C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D43F11811B54A956005B04C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D43F11851B54A956005B04C8 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +428,7 @@
 		};
 		D43F11971B54A956005B04C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C115BE486BB1FAB24BE9FC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nian/Info.plist;
@@ -355,6 +439,7 @@
 		};
 		D43F11981B54A956005B04C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E3E090CCD76FD44F2F5747 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nian/Info.plist;
@@ -416,6 +501,7 @@
 				D43F11981B54A956005B04C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D43F11991B54A956005B04C8 /* Build configuration list for PBXNativeTarget "NianTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +510,7 @@
 				D43F119B1B54A956005B04C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

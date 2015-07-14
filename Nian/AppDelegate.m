@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  Nian
 //
-//  Created by 周宏 on 15/7/14.
-//  Copyright (c) 2015年 周宏. All rights reserved.
+//  Created by 周宏 on 15/7/7.
+//  Copyright (c) 2015年 ZL. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "NianViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    NianViewController *vc = [[NianViewController alloc] init];
+    window.rootViewController = vc;
+    [window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  NianViewController.h
 //  Nian
 //
 //  Created by 周宏 on 15/7/7.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface NianViewController : UIViewController
 
 @end
-
