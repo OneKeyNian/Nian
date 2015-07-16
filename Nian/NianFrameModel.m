@@ -7,7 +7,11 @@
 //
 
 #import "NianFrameModel.h"
-#define SIZE(str, font) [str boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:0 attributes:@{NSFontAttributeName : font} context:nil].size
+#define Size(str, font) [str boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:0 attributes:@{NSFontAttributeName : font} context:nil].size
+#define SizeWithMaxFloat(str, font, maxFloat) [str boundingRectWithSize:CGSizeMake(MAXFLOAT, maxFloat) options:0 attributes:@{NSFontAttributeName : font} context:nil].size
+#define FontSize 14
+#define margin   20
+#define Font     [UIFont systemFontOfSize:FontSize]
 
 @implementation NianFrameModel
 
@@ -21,19 +25,21 @@
     CGFloat yPoint      = 20;
     _fPoint = CGRectMake(xPoint, yPoint, rPoint, rPoint);
     
+    CGFloat maxFloat    = sScreen.width * 0.5 - margin * 2;
+    
+    CGFloat wContent    = SizeWithMaxFloat(model.text, Font, maxFloat).width;
     CGFloat hContent    = 50;
-    CGFloat wContent    = sScreen.width * 0.5 - 40;
     CGFloat yContent    = 0;
-    CGFloat xContent    = 20;
+    CGFloat xContent    = sScreen.width * 0.5 - margin - wContent;
     
     CGFloat hTime       = hContent;
-    CGFloat wTime       = wContent;
+    CGFloat wTime       = Size(model.strDate, Font).width;
     CGFloat yTime       = 0;
-    CGFloat xTime       = sScreen.width * 0.5 + 20;
+    CGFloat xTime       = sScreen.width * 0.5 + margin;
     
-    if (model.index%2 == 1) {
-        xContent        = xTime;
-        xTime           = 20;
+    if (model.index % 2 == 0) {
+        xContent    = xTime;
+        xTime       = sScreen.width * 0.5 - margin - wTime;
     }
     
     _fContent = CGRectMake(xContent, yContent, wContent, hContent);

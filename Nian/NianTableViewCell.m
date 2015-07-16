@@ -7,6 +7,7 @@
 //
 
 #import "NianTableViewCell.h"
+#define FontSize 14
 
 @interface NianTableViewCell ()
 
@@ -45,13 +46,13 @@
         [self addSubview:vPoint];
         
         UILabel *labelTime   = [[UILabel alloc] init];
-        labelTime.font       = [UIFont systemFontOfSize:13];
+        labelTime.font       = [UIFont systemFontOfSize:FontSize];
         self.labelTime       = labelTime;
         [self addSubview:labelTime];
         
         UILabel *labelContent   = [[UILabel alloc] init];
         labelContent.numberOfLines = 2;
-        labelContent.font       = [UIFont systemFontOfSize:13];
+        labelContent.font       = [UIFont systemFontOfSize:FontSize];
         self.labelContent       = labelContent;
         [self addSubview:labelContent];
         
