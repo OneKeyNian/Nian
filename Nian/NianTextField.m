@@ -44,7 +44,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.textField.frame    = CGRectMake(20, 0, self.bounds.size.width - 20, self.bounds.size.height);
-    self.vLine.frame        = CGRectMake(0, 44 - 1, self.bounds.size.width, 0.5);
+    self.vLine.frame        = CGRectMake(0, 44 - 0.5, self.bounds.size.width, 0.5);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{

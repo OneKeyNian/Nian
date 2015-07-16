@@ -10,12 +10,12 @@
 #import "NianModel.h"
 @interface NianDBTool : NSObject
 
-+ (NSArray *)getLocalData;
++ (NSMutableArray *)getLocalData;
 
 + (void)insertRecodeWithModel:(NianModel *)model;
 
 + (void)deleteTodayRecode;
 
-+ (NSMutableArray *)createDB;
++ (void)createDB;
 
 @end
