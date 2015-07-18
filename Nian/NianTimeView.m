@@ -36,6 +36,7 @@
         label.textAlignment = NSTextAlignmentCenter;
         
         NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         self.timer  = timer;
         [timer fire];
     }
@@ -50,7 +51,7 @@
 - (NSDateFormatter *)formatter{
     if (!_formatter) {
         _formatter = [[NSDateFormatter alloc] init];
-        _formatter.dateFormat = @"MMdd hh:mm ss\"";
+        _formatter.dateFormat = @"MMdd HH:mm ss\"";
     }
     return _formatter;
 }

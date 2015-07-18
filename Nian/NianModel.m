@@ -13,7 +13,7 @@
 - (void)setDate:(NSDate *)date{
     _date                       = date;
     NSDateFormatter *formatter  = [[NSDateFormatter alloc] init];
-    formatter.dateFormat        = @"MM dd HH mm";
+    formatter.dateFormat        = @"MMddHHmm";
     _strDate                    = [formatter stringFromDate:date];
 }
 

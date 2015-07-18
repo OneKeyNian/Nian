@@ -70,7 +70,7 @@
     FMDatabase * db = [FMDatabase databaseWithPath:PATH];
     NSMutableArray *mary = [NSMutableArray array];
     if ([db open]) {
-        NSString * sql = @"SELECT * FROM Nian_data";
+        NSString * sql = @"SELECT * FROM Nian_data ORDER BY date DESC";
         FMResultSet * rs = [db executeQuery:sql];
         while ([rs next]) {
             NSString *strDate = [rs stringForColumn:@"date"];

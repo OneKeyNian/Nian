@@ -7,6 +7,7 @@
 //
 
 #import "NianTableViewCell.h"
+#import "NianDetailViewController.h"
 #define FontSize 14
 
 @interface NianTableViewCell ()
@@ -18,6 +19,8 @@
 
 @property (nonatomic, weak)     UILabel         *labelContent;
 @property (nonatomic, weak)     UIImageView     *iv;
+
+@property (nonatomic, strong)   UITapGestureRecognizer *tap;
 
 @end
 
@@ -59,8 +62,19 @@
         UIImageView *iv         = [[UIImageView alloc] init];
         self.iv                 = iv;
         [self addSubview:iv];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        tap.numberOfTapsRequired = 2;
+        self.tap = tap;
+        [self addGestureRecognizer:tap];
     }
     return self;
+}
+
+- (void)tap:(UITapGestureRecognizer *)tap{
+    if ([self.delegate respondsToSelector:@selector(doubleTapWithModel:)]) {
+        [self.delegate doubleTapWithModel:self.fModel.model];
+    }
 }
 
 - (void)setModel:(NianModel *)model{
