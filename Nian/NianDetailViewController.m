@@ -79,26 +79,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-    tap.numberOfTapsRequired = 2;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     self.tap = tap;
+    tap.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:tap];
     
 }
 
-- (void)tap:(UITapGestureRecognizer *)tap{
-    [UIView animateKeyframesWithDuration:0.3 delay:0.0 options:0 animations:^{
-        self.view.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        [self.view removeFromSuperview];
-    }];
-    
-//    [UIView animateWithDuration:0.3 animations:^{
+- (void)doubleTap:(UITapGestureRecognizer *)tap{
+    NSLog(@"22");
+}
+
+//- (void)tap:(UITapGestureRecognizer *)tap{
+//    [UIView animateKeyframesWithDuration:0.3 delay:0.0 options:0 animations:^{
 //        self.view.alpha = 0.0;
 //    } completion:^(BOOL finished) {
 //        [self.view removeFromSuperview];
 //    }];
-}
+//    
+////    [UIView animateWithDuration:0.3 animations:^{
+////        self.view.alpha = 0.0;
+////    } completion:^(BOOL finished) {
+////        [self.view removeFromSuperview];
+////    }];
+//}
 
 - (void)setupSubviews{
     UIImageView *iv = [[UIImageView alloc] init];
