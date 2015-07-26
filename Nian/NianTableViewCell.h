@@ -11,17 +11,9 @@
 
 @class NianTableViewCell;
 
-@protocol NianTableViewCellDelegate <NSObject>
-
-- (void)doubleTapWithModel:(NianModel *)model;
-
-@end
-
 @interface NianTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) NianModel *model;
-
-@property (nonatomic, weak) id<NianTableViewCellDelegate> delegate;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

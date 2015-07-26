@@ -17,9 +17,9 @@
 #define GlobalHeight 44
 #define LastDateKey  @"fejjiof"
 
-@interface NianViewController () <UITableViewDataSource, UITableViewDelegate, NianTextFieldDelegate, NianTableViewCellDelegate>
+@interface NianViewController () <UITableViewDataSource, UITableViewDelegate, NianTextFieldDelegate>
 
-@property (nonatomic, weak)     UITableView     *tableView;
+@property (nonatomic, weak)     UITableView     *tableView; 
 
 @property (nonatomic, strong)   NSMutableArray  *maryModel;
 
@@ -40,6 +40,11 @@
 
 @property (nonatomic, weak)     UIScrollView    *scrollView;
 
+@property (nonatomic, strong)   NianDetailViewController *detailVC;
+
+@property (nonatomic, strong)   NianDetailViewController *homeVC;
+
+@property (nonatomic, strong)   UITapGestureRecognizer   *doubleTap;
 
 @end
 
@@ -57,7 +62,7 @@
     double timezoneFix = [NSTimeZone localTimeZone].secondsFromGMT;
     NSNumber *old = [[NSUserDefaults standardUserDefaults] objectForKey:LastDateKey];
     if (old) {
-        int i = ((int)([[NSDate date] timeIntervalSince1970] + timezoneFix) - (int)([old doubleValue] + timezoneFix))/(24 * 3600);
+        int i = ((int)([[NSDate date] timeIntervalSince1970] + timezoneFix)/(24 * 3600) - (int)([old intValue] + timezoneFix)/(24 * 3600));
         if (i == 0) {
             self.flagToday = YES;
         }
@@ -100,7 +105,8 @@
     [self.view addSubview:scrollView];
     
     NianModel *model = [NianModel modelWithDate:[NSDate date] text:@"弱就是一种罪" img:nil];
-    NianDetailViewController *vc = [NianDetailViewController vcWithModel:model];
+    NianDetailViewController *vc = [NianDetailViewController vcWitharray:@[model] index:0];
+    self.homeVC = vc;
     [scrollView addSubview:vc.view];
     
     // tableview
@@ -110,6 +116,11 @@
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView          = tableView;
     [self.scrollView addSubview:tableView];
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    self.doubleTap = doubleTap;
+    [tableView addGestureRecognizer:doubleTap];
     
     // 分隔线
     UIView *vLine = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width * 0.5 - 0.5, GlobalHeight, 0.5, self.view.bounds.size.height - 20)];
@@ -136,9 +147,12 @@
     self.maryModel = [NianDBTool getLocalData];
 }
 
-#pragma mark - NiancellDelegate
-- (void)doubleTapWithModel:(NianModel *)model{
-    NianDetailViewController *vc = [NianDetailViewController vcWithModel:model];
+- (void)doubleTap:(UITapGestureRecognizer *)doubleTap{
+    CGPoint point = [doubleTap locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+#warning 小心内存泄露
+    NianDetailViewController *vc = [NianDetailViewController vcWitharray:self.maryModel index:(int)indexPath.row];
+    self.detailVC = vc;
     vc.view.alpha = 0.0;
     [self.view addSubview:vc.view];
     [UIView animateWithDuration:0.3 animations:^{
@@ -159,7 +173,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NianTableViewCell *cell = [NianTableViewCell cellWithTableView:tableView];
-    cell.delegate = self;
     
     NianModel *model = self.maryModel[indexPath.row];
     model.index = (int)indexPath.row;

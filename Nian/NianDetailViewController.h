@@ -11,6 +11,6 @@
 
 @interface NianDetailViewController : UIViewController
 
-+ (instancetype)vcWithModel:(NianModel *)model;
++ (instancetype)vcWitharray:(NSArray *)array index:(int)index;
 
 @end

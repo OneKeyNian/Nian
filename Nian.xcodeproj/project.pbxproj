@@ -22,6 +22,8 @@
 		D43F11AE1B54A9E1005B04C8 /* NianTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A51B54A9E1005B04C8 /* NianTextField.m */; };
 		D43F11AF1B54A9E1005B04C8 /* NianTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A71B54A9E1005B04C8 /* NianTimeView.m */; };
 		D43F11B01B54A9E1005B04C8 /* NianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F11A91B54A9E1005B04C8 /* NianViewController.m */; };
+		D4AB72E91B5E908600AC5EE1 /* NianCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AB72E81B5E908600AC5EE1 /* NianCollectionViewCell.m */; };
+		D4AB72EC1B5F867F00AC5EE1 /* NianCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AB72EB1B5F867F00AC5EE1 /* NianCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		D43F11A71B54A9E1005B04C8 /* NianTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianTimeView.m; sourceTree = "<group>"; };
 		D43F11A81B54A9E1005B04C8 /* NianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianViewController.h; sourceTree = "<group>"; };
 		D43F11A91B54A9E1005B04C8 /* NianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianViewController.m; sourceTree = "<group>"; };
+		D4AB72E71B5E908600AC5EE1 /* NianCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianCollectionViewCell.h; sourceTree = "<group>"; };
+		D4AB72E81B5E908600AC5EE1 /* NianCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianCollectionViewCell.m; sourceTree = "<group>"; };
+		D4AB72EA1B5F867F00AC5EE1 /* NianCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NianCollectionViewLayout.h; sourceTree = "<group>"; };
+		D4AB72EB1B5F867F00AC5EE1 /* NianCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NianCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +130,8 @@
 				D43F11A71B54A9E1005B04C8 /* NianTimeView.m */,
 				D43F11A81B54A9E1005B04C8 /* NianViewController.h */,
 				D43F11A91B54A9E1005B04C8 /* NianViewController.m */,
-				D43F117A1B54A956005B04C8 /* AppDelegate.h */,
 				D43F117B1B54A956005B04C8 /* AppDelegate.m */,
+				D43F117A1B54A956005B04C8 /* AppDelegate.h */,
 				D43F11831B54A956005B04C8 /* Images.xcassets */,
 				D43F11851B54A956005B04C8 /* LaunchScreen.xib */,
 				D43F11761B54A956005B04C8 /* Supporting Files */,
@@ -133,6 +139,10 @@
 				D432C6B01B5944D30035C2E3 /* NianDetailViewController.m */,
 				D432C6B21B5950870035C2E3 /* UIView+ZH.m */,
 				D432C6B31B5950870035C2E3 /* UIView+ZH.h */,
+				D4AB72E71B5E908600AC5EE1 /* NianCollectionViewCell.h */,
+				D4AB72E81B5E908600AC5EE1 /* NianCollectionViewCell.m */,
+				D4AB72EA1B5F867F00AC5EE1 /* NianCollectionViewLayout.h */,
+				D4AB72EB1B5F867F00AC5EE1 /* NianCollectionViewLayout.m */,
 			);
 			path = Nian;
 			sourceTree = "<group>";
@@ -319,10 +329,12 @@
 				D43F11AF1B54A9E1005B04C8 /* NianTimeView.m in Sources */,
 				D43F11AD1B54A9E1005B04C8 /* NianTableViewCell.m in Sources */,
 				D432C6B41B5950870035C2E3 /* UIView+ZH.m in Sources */,
+				D4AB72E91B5E908600AC5EE1 /* NianCollectionViewCell.m in Sources */,
 				D432C6B11B5944D30035C2E3 /* NianDetailViewController.m in Sources */,
 				D43F11AB1B54A9E1005B04C8 /* NianFrameModel.m in Sources */,
 				D43F11B01B54A9E1005B04C8 /* NianViewController.m in Sources */,
 				D43F11AE1B54A9E1005B04C8 /* NianTextField.m in Sources */,
+				D4AB72EC1B5F867F00AC5EE1 /* NianCollectionViewLayout.m in Sources */,
 				D43F11AA1B54A9E1005B04C8 /* NianDBTool.m in Sources */,
 				D43F11791B54A956005B04C8 /* main.m in Sources */,
 				D43F11AC1B54A9E1005B04C8 /* NianModel.m in Sources */,
