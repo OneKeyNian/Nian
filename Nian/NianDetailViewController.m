@@ -18,6 +18,9 @@
 
 @property (nonatomic, strong)   NSArray             *dataSource;
 
+/**
+ *  点击的顺序 如果为-1 表示是首页的左侧视图
+ */
 @property (nonatomic, assign)   int                 index;
 
 @end
@@ -45,7 +48,9 @@
     self.cv             = cv;
     [self.view addSubview:cv];
     [cv registerClass:[NianCollectionViewCell class] forCellWithReuseIdentifier:@"ID"];
-    [cv scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.index inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    if (self.index != -1) {
+        [cv scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.index inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -53,7 +58,7 @@
 }
 
 - (void)collectionViewCelldoubleTap{
-    if (self.dataSource.count == 1) {
+    if (self.index == -1) {
         return;
     }
     [UIView animateWithDuration:0.3 animations:^{

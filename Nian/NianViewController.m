@@ -105,7 +105,7 @@
     [self.view addSubview:scrollView];
     
     NianModel *model = [NianModel modelWithDate:[NSDate date] text:@"弱就是一种罪" img:nil];
-    NianDetailViewController *vc = [NianDetailViewController vcWitharray:@[model] index:0];
+    NianDetailViewController *vc = [NianDetailViewController vcWitharray:@[model] index:-1];
     self.homeVC = vc;
     [scrollView addSubview:vc.view];
     
