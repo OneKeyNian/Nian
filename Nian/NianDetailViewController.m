@@ -51,6 +51,7 @@
     if (self.index != -1) {
         [cv scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.index inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
+    cv.pagingEnabled = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

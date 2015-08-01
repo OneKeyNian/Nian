@@ -49,6 +49,7 @@
 
 + (void)createDB{
     NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSLog(@"%@", PATH);
     if (![fileManager fileExistsAtPath:PATH]) {
         FMDatabase *db = [FMDatabase databaseWithPath:PATH];
         if ([db open]) {
@@ -74,7 +75,7 @@
         FMResultSet * rs = [db executeQuery:sql];
         while ([rs next]) {
             NSString *strDate = [rs stringForColumn:@"date"];
-            NSString *strDateDetail    = [rs stringForColumn:@"date_detail"];
+            NSString *strDateDetail = [rs stringForColumn:@"date_detail"];
             
             NSString *strDateAll = [NSString stringWithFormat:@"%@%@", strDate, strDateDetail];
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -93,7 +94,20 @@
 + (void)deleteTodayRecode{
     FMDatabase *db = [FMDatabase databaseWithPath:PATH];
     if ([db open]) {
-        
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = DATE_FORMATTER;
+        NSString *strDate = [formatter stringFromDate:date];
+        NSString *sql = [NSString stringWithFormat:@"DELETE FROM Nian_data WHERE date='%@'", strDate];
+        BOOL res = [db executeUpdate:sql];
+        if (!res) {
+            NSLog(@"失败");
+        } else {
+            NSLog(@"成功");
+        }
+        [db close];
+    } else {
+        NSLog(@"打开db失败");
     }
 }
 

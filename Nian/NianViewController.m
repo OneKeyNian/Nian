@@ -46,6 +46,8 @@
 
 @property (nonatomic, strong)   UITapGestureRecognizer   *doubleTap;
 
+@property (nonatomic, strong)   UILongPressGestureRecognizer *lp;
+
 @end
 
 @implementation NianViewController
@@ -67,7 +69,6 @@
             self.flagToday = YES;
         }
     }
-    
     
     // 建立数据库
     [NianDBTool createDB];
@@ -122,6 +123,12 @@
     self.doubleTap = doubleTap;
     [tableView addGestureRecognizer:doubleTap];
     
+    UILongPressGestureRecognizer *lp = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    lp.minimumPressDuration = 0.5;
+    self.lp = lp;
+    [tableView addGestureRecognizer:lp];
+    
+    
     // 分隔线
     UIView *vLine = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width * 0.5 - 0.5, GlobalHeight, 0.5, self.view.bounds.size.height - 20)];
     vLine.backgroundColor = [UIColor grayColor];
@@ -148,6 +155,9 @@
 }
 
 - (void)doubleTap:(UITapGestureRecognizer *)doubleTap{
+    if (!self.maryModel.count) {
+        return;
+    }
     CGPoint point = [doubleTap locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
 #warning 小心内存泄露
@@ -158,6 +168,21 @@
     [UIView animateWithDuration:0.3 animations:^{
         vc.view.alpha = 1.0;
     }];
+}
+
+- (void)longPress:(UILongPressGestureRecognizer *)lp{
+    if (lp.state == UIGestureRecognizerStateBegan) {
+        CGPoint point = [lp locationInView:self.tableView];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+        
+        if (indexPath.row == 0 && self.flagToday) {
+            [NianDBTool deleteTodayRecode];
+            [self.maryModel removeObjectAtIndex:indexPath.row];
+            self.flagToday = NO;
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:LastDateKey];
+        }
+    }
 }
 
 #pragma mark - btnClick
